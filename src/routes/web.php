@@ -16,14 +16,15 @@ use App\Http\Controllers\HelloController;
 |
 */
 
-Route::get('/', function () {
-  return view('welcome');
-});
+// Route::get('/', function () {
+//   return view('welcome');
+// });
 
+Route::get('/', [TestController::class, 'index']);
 // クエリパラメータ
 // Route::get('/test', [TestController::class, 'index']);
 // Route::get('/test/{room}/{id}', [TestController::class, 'index']);
-Route::get('/test/{text?}', [TestController::class, 'index']);
+// Route::get('/test/{text?}', [TestController::class, 'index']);
 // アドレス部分に{パラメータ名}を指定することで、パラメータを受け付けるルーティングを設定
 // Route::get('/test/{text}', [TestController::class, 'index']); // 必須パラメータ
 // Route::get('/test/{text?}', [TestController::class, 'index']); // 任意パラメータ
