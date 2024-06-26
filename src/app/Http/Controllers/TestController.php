@@ -26,6 +26,5 @@ class TestController extends Controller
     ];
     // view関数を呼び出して、ビューを指定している
     return view('index', $item); // 第１引数：表示するテンプレートファイル名, 第２引数：ビューに渡すパラメータ（連想配列）
-    
   }
 }
